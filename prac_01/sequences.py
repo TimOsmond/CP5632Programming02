@@ -1,8 +1,8 @@
 """
 CP1404/CP5632 - Practical 1
 Program to allow primary school students to learn about various number sequences.
-A menu-driven program that has the following choices (where x and y are inputs the user
-enters once at the start of the program):
+A menu-driven program that has the following choices (where x and y are inputs
+the user enters once at the start of the program):
 Show the even numbers from x to y
 Show the odd numbers from x to y
 Show the squares from x to y
