@@ -1,0 +1,10 @@
+16 is Bad
+81 is Passable
+93 is Excellent
+16 is Bad
+50 is Passable
+50 is Passable
+72 is Passable
+15 is Bad
+93 is Excellent
+42 is Bad
