@@ -1,0 +1,306 @@
+Index: junk.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># age = int(input(\"What is your age: \"))\r\n# while age < 0 or age > 120:\r\n#     print(\"Invalid age\")\r\n#     age = int(input(\"What is your age: \"))\r\n# if age <= 4:\r\n#     age_range = \"Baby\"\r\n# elif age <= 17:\r\n#     age_range = \"Child\"\r\n# elif age <= 65:\r\n#     age_range = \"Adult\"\r\n# else:\r\n#     age_range = \"Old\"\r\n# print(f\"You are considered {age_range}\")\r\n\r\n# from random import randint\r\n# number = randint(1, 10)\r\n# # print(f\"{number}\")\r\n# guess = int(input(\"Guess a number between 1 and 10 incl: \"))\r\n# while guess != number:\r\n#     print(\"Try again!\")\r\n#     guess = int(input(\"Guess a number between 1 and 10 incl: \"))\r\n# print(f\"Correct, the number was {number}\")\r\n\r\n# count = 0\r\n# total_age = 0\r\n# number_people = int(input(\"How many ages: \"))\r\n# for i in range(1, number_people + 1):\r\n#     count = + i\r\n#     age = int(input(f\"What is age {count}: \"))\r\n#     total_age += age\r\n#     average_age = total_age / number_people\r\n# print(f\"Total age is {total_age} \\nAverage age is {average_age}\")\r\n\r\n# total_people = 0\r\n# total_age = 0\r\n# age = int(input(\"What is their age 1: \"))\r\n# while age >= 0:\r\n#     total_people += 1\r\n#     total_age += age\r\n#     age = int(input(f\"What is their age {total_people + 1}: \"))\r\n# if total_people == 0:\r\n#     print(\"No input\")\r\n# else:\r\n#     average_age = total_age / total_people\r\n#     print(f\"Total age of {total_people} people is {total_age} \\nTheir average age is {average_age}\")\r\n\r\n# gifts = int(input(\"How many gifts: \"))\r\n# students = int(input(\"How many students: \"))\r\n# gift_each = gifts // students\r\n# remainder = gifts % students\r\n# print(f\"Each student gets {gift_each} with {remainder} left over.\")\r\n\r\n# GST = 1.1  # add 10% GST\r\n# price = float(input(\"Price: \"))\r\n# add_gst = input(\"Add GST (Y/N): \").upper()\r\n# if add_gst == \"Y\":\r\n#     print(f\"Price is ${price * GST:.2f}\")\r\n# else:\r\n#     print(f\"Price is ${price:.2f}\")\r\n\r\n# from random import randint\r\n#\r\n# length = int(input(\"Length: \"))\r\n# width = randint(1, length)\r\n# print(f\"Width: {width}\")\r\n# print(f\"Area of {length} x {width} is {length * width}\")\r\n\r\n# def print_grid(number_of_rows, number_of_columns):\r\n#     for i in range(number_of_rows):\r\n#         for j in range(number_of_columns):\r\n#             print(\"*\", end=\"\")\r\n#         print()\r\n#\r\n#\r\n# print_grid(3, 7)\r\n\r\n\"\"\"\r\nmodule-level docstring\r\n\"\"\"\r\nimport random\r\nimport string\r\n\r\n\"\"\"Make sure it has a docstring.\"\"\"\r\n\r\n\r\ndef main():\r\n    MENU = \"\"\"(G)et name, (P)rint Greeting, (S)ecret name, (Q)uit\"\"\"\r\n    choice = \"\"\r\n    choice = menu_choice(MENU, choice)\r\n    while choice != \"Q\":\r\n        if choice == \"G\":\r\n            name = get_valid_name()\r\n            print(f\"Hello {name}\")\r\n            choice = menu_choice(MENU, choice)\r\n        elif choice == \"P\":\r\n            print_greeting()\r\n            choice = menu_choice(MENU, choice)\r\n        else:\r\n            print_secret_name()\r\n            choice = menu_choice(MENU, choice)\r\n    print(\"Bye!\")\r\n\r\n\r\ndef print_secret_name():\r\n    name = get_valid_name()\r\n    for i in range(1, len(name) + 1):\r\n        secret_name = random.choice(string.ascii_letters[0:26])\r\n        print(secret_name, end=\"\")\r\n    print()\r\n\r\n\r\ndef print_greeting():\r\n    name = get_valid_name()\r\n    length = len(name)\r\n    print(\"*\" * length)\r\n    print(name)\r\n    print(\"*\" * length)\r\n\r\n\r\ndef menu_choice(MENU, choice):\r\n    print(MENU)\r\n    choice = input(\"Choose: \").upper()\r\n    return choice\r\n\r\n\r\ndef get_valid_name():\r\n    \"\"\"This is a DOCSTRING.\"\"\"\r\n    name = input(\"Name: \")\r\n    if name == \"\":\r\n        print(\"Invalid name\")\r\n        name = get_valid_name()\r\n    return name\r\n\r\n\r\nmain()\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/junk.py b/junk.py
+--- a/junk.py	(revision 88b4f8fddfcc90d3380213be10db40749f7424b3)
++++ b/junk.py	(date 1663910427962)
+@@ -73,63 +73,72 @@
+ #
+ #
+ # print_grid(3, 7)
+-
+-"""
+-module-level docstring
+-"""
+-import random
+-import string
+-
+-"""Make sure it has a docstring."""
+-
+-
+-def main():
+-    MENU = """(G)et name, (P)rint Greeting, (S)ecret name, (Q)uit"""
+-    choice = ""
+-    choice = menu_choice(MENU, choice)
+-    while choice != "Q":
+-        if choice == "G":
+-            name = get_valid_name()
+-            print(f"Hello {name}")
+-            choice = menu_choice(MENU, choice)
+-        elif choice == "P":
+-            print_greeting()
+-            choice = menu_choice(MENU, choice)
+-        else:
+-            print_secret_name()
+-            choice = menu_choice(MENU, choice)
+-    print("Bye!")
+-
+-
+-def print_secret_name():
+-    name = get_valid_name()
+-    for i in range(1, len(name) + 1):
+-        secret_name = random.choice(string.ascii_letters[0:26])
+-        print(secret_name, end="")
+-    print()
+-
+-
+-def print_greeting():
+-    name = get_valid_name()
+-    length = len(name)
+-    print("*" * length)
+-    print(name)
+-    print("*" * length)
+-
+-
+-def menu_choice(MENU, choice):
+-    print(MENU)
+-    choice = input("Choose: ").upper()
+-    return choice
++#
++# """
++# module-level docstring
++# """
++# import random
++# import string
++#
++# """Make sure it has a docstring."""
++#
++#
++# def main():
++#     MENU = """(G)et name, (P)rint Greeting, (S)ecret name, (Q)uit"""
++#     choice = ""
++#     choice = menu_choice(MENU, choice)
++#     while choice != "Q":
++#         if choice == "G":
++#             name = get_valid_name()
++#             print(f"Hello {name}")
++#             choice = menu_choice(MENU, choice)
++#         elif choice == "P":
++#             print_greeting()
++#             choice = menu_choice(MENU, choice)
++#         else:
++#             print_secret_name()
++#             choice = menu_choice(MENU, choice)
++#     print("Bye!")
++#
++#
++# def print_secret_name():
++#     name = get_valid_name()
++#     for i in range(1, len(name) + 1):
++#         secret_name = random.choice(string.ascii_letters[0:26])
++#         print(secret_name, end="")
++#     print()
++#
++#
++# def print_greeting():
++#     name = get_valid_name()
++#     length = len(name)
++#     print("*" * length)
++#     print(name)
++#     print("*" * length)
++#
++#
++# def menu_choice(MENU, choice):
++#     print(MENU)
++#     choice = input("Choose: ").upper()
++#     return choice
++#
++#
++# def get_valid_name():
++#     """This is a DOCSTRING."""
++#     name = input("Name: ")
++#     if name == "":
++#         print("Invalid name")
++#         name = get_valid_name()
++#     return name
++#
++#
++# main()
+ 
++"""Get the files and folders in the current directory."""
++import os
+ 
+-def get_valid_name():
+-    """This is a DOCSTRING."""
+-    name = input("Name: ")
+-    if name == "":
+-        print("Invalid name")
+-        name = get_valid_name()
+-    return name
+-
+-
+-main()
++print(f"The files and folders in {os.getcwd()} are:")
++items = os.listdir('.')
++for item in items:
++    prefix = "(d) " if os.path.isdir(item) else "(f) "
++    print(f"{prefix}\t{item}")
+Index: prac_02/string_formatting_examples.py
+===================================================================
+diff --git a/prac_02/string_formatting_examples.py b/prac_02/string_formatting_examples.py
+deleted file mode 100644
+--- a/prac_02/string_formatting_examples.py	(revision 88b4f8fddfcc90d3380213be10db40749f7424b3)
++++ /dev/null	(revision 88b4f8fddfcc90d3380213be10db40749f7424b3)
+@@ -1,47 +0,0 @@
+-"""
+-CP1404/CP5632 - Practical
+-Various examples of using Python string formatting with the str.format() method
+-Want to read more about it? https://docs.python.org/3/library/string.html#formatstrings
+-"""
+-
+-name = "Gibson L-5 CES"
+-year = 1922
+-cost = 16035.4
+-
+-# The ‘old’ manual way to format text with string concatenation:
+-print("My guitar: " + name + ", first made in " + str(year))
+-
+-# A better way - using str.format():
+-print("My guitar: {}, first made in {}".format(name, year))
+-print("My guitar: {0}, first made in {1}".format(name, year))
+-print("My {0} was first made in {1} (that's right, {1}!)".format(name, year))
+-
+-# And with f-string formatting (introduced in Python 3.6)
+-print(f"My {name} was first made in {year} (that's right, {year}!)")
+-
+-# Formatting currency (grouping with comma, 2 decimal places):
+-print("My {} would cost ${:,.2f}".format(name, cost))
+-print(f"My {name} would cost ${cost:,.2f}")
+-
+-# Aligning columns:
+-numbers = [1, 19, 123, 456, -25]
+-for number in numbers:
+-    print("Number is {:>5}".format(number))
+-
+-# An f-string version of the above using the enumerate function, useful when you want the index and value
+-for i, number in enumerate(numbers, 1):
+-    print(f"Number {i} is {number:>5}")
+-
+-# TODO: Use string formatting (.format() or f-strings) to produce the output:
+-# 1922 Gibson L-5 CES for about $16,035!
+-print(f"{year} {name} for about ${cost:,.0f}!")
+-
+-# TODO: Using a for loop with the range function and string formatting,
+-# produce the following right-aligned output (DO NOT use a list):
+-#   0
+-#  50
+-# 100
+-# 150
+-numbers = (0, 50, 100, 150)
+-for i, number in enumerate(numbers, 1):
+-    print(f"{number:>5}")
+Index: .idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/modules.xml b/.idea/modules.xml
+new file mode 100644
+--- /dev/null	(date 1663033111698)
++++ b/.idea/modules.xml	(date 1663033111698)
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectModuleManager">
++    <modules>
++      <module fileurl="file://$PROJECT_DIR$/.idea/CP5632 Programming 2.iml" filepath="$PROJECT_DIR$/.idea/CP5632 Programming 2.iml" />
++    </modules>
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/inspectionProfiles/profiles_settings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/inspectionProfiles/profiles_settings.xml b/.idea/inspectionProfiles/profiles_settings.xml
+new file mode 100644
+--- /dev/null	(date 1663033111759)
++++ b/.idea/inspectionProfiles/profiles_settings.xml	(date 1663033111759)
+@@ -0,0 +1,6 @@
++<component name="InspectionProjectProfileManager">
++  <settings>
++    <option name="USE_PROJECT_PROFILE" value="false" />
++    <version value="1.0" />
++  </settings>
++</component>
+\ No newline at end of file
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+new file mode 100644
+--- /dev/null	(date 1663819544444)
++++ b/.idea/vcs.xml	(date 1663819544444)
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="$PROJECT_DIR$" vcs="Git" />
++    <mapping directory="$PROJECT_DIR$/Practicals" vcs="Git" />
++    <mapping directory="$PROJECT_DIR$/Starter" vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+new file mode 100644
+--- /dev/null	(date 1663033111740)
++++ b/.idea/misc.xml	(date 1663033111740)
+@@ -0,0 +1,4 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.9" project-jdk-type="Python SDK" />
++</project>
+\ No newline at end of file
+Index: .idea/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/.gitignore b/.idea/.gitignore
+new file mode 100644
+--- /dev/null	(date 1663033112639)
++++ b/.idea/.gitignore	(date 1663033112639)
+@@ -0,0 +1,8 @@
++# Default ignored files
++/shelf/
++/workspace.xml
++# Editor-based HTTP Client requests
++/httpRequests/
++# Datasource local storage ignored files
++/dataSources/
++/dataSources.local.xml
+Index: .idea/inspectionProfiles/Project_Default.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/inspectionProfiles/Project_Default.xml b/.idea/inspectionProfiles/Project_Default.xml
+new file mode 100644
+--- /dev/null	(date 1663033111502)
++++ b/.idea/inspectionProfiles/Project_Default.xml	(date 1663033111502)
+@@ -0,0 +1,12 @@
++<component name="InspectionProjectProfileManager">
++  <profile version="1.0">
++    <option name="myName" value="Project Default" />
++    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
++      <option name="ignoredIdentifiers">
++        <list>
++          <option value="prac_02.programs.*" />
++        </list>
++      </option>
++    </inspection_tool>
++  </profile>
++</component>
+\ No newline at end of file
