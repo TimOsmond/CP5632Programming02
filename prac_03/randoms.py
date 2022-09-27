@@ -26,5 +26,7 @@ Write code, not a comment, to produce a random number between 1 and 100 inclusiv
 # smallest 1.0, largest 5.5
 
 from random import randint
+from random import uniform
 
-print(randint(0, 10))
+print(randint(0, 10))  # Whole numbers only
+print(uniform(0, 100))  # To 15 decimal places
