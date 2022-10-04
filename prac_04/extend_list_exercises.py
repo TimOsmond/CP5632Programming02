@@ -4,9 +4,12 @@ Using list operations.
 
 # 1. Basic list operations
 numbers = []
-for i in range(5):
-    number = int(input("Number: "))
+count = 1
+number = int(input(f"Number {count}: "))
+while number >= 0:
+    count += 1
     numbers.append(number)
+    number = int(input(f"Number {count}: "))
 print("The first number is", numbers[0])
 print("The last number is", numbers[-1])
 print("The smallest number is", min(numbers))
