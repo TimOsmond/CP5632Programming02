@@ -17,4 +17,4 @@ for i in range(number_of_quick_picks):
             number = random.randint(MINIMUM, MAXIMUM)
         quick_pick.append(number)
     quick_pick.sort()
-    print(" ".join("{}".format(number) for number in quick_pick))
+    print(" ".join("{:2}".format(number) for number in quick_pick))
