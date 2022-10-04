@@ -10,6 +10,13 @@ def main():
     """Display classes information"""
     data = get_data()
     print(data)
+    print_details(data)
+
+
+def print_details(data):
+    """Print details of classes"""
+    for class_details in data:
+        print("{} is taught by {:12} and has {:3} students".format(*class_details))
 
 
 def get_data():
