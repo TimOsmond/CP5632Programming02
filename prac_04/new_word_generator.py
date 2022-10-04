@@ -6,28 +6,33 @@ Another way to get just consonants would be to use string.ascii_lowercase
 (all letters) and remove the vowels.
 """
 import random
-import string
 
 VOWELS = "aeiou"
 CONSONANTS = "bcdfghjklmnpqrstvwxyz"
 
-for i in range(1):
-    menu_choices = random.sample(string.ascii_lowercase, 3)
-    consonant = menu_choices[0]
-    vowel = menu_choices[1]
-    either = menu_choices[2]
-    print(menu_choices)
-word_format = input(f"What format:\n \t{consonant} is consonant\n \t{vowel} is vowel\n "
-                    f"\t{either} is either\n \tOther letters are used:\n"
-                    f"*menu letters cannot be used*\n> ").lower()
-word = ""
-for kind in word_format:
-    if kind == consonant:
-        word += random.choice(CONSONANTS)
-    elif kind == vowel:
-        word += random.choice(VOWELS)
-    elif kind == either:
-        word += random.choice(string.ascii_lowercase)
-    else:
-        word += kind
-print(word)
+
+def main():
+    """ Generate a random word based on the user's input. """
+    consonant = "c"
+    vowel = "v"
+    word_format = input(f"What format:\n \t{consonant} is consonant\n \t{vowel} is vowel\n>> ").lower()
+    word = ""
+    while not is_valid_input(word_format):
+        word_format = input("Invalid input, please enter a valid format: ").lower()
+    for kind in word_format:
+        if kind == "c":
+            word += random.choice(CONSONANTS)
+        if kind == "v":
+            word += random.choice(VOWELS)
+    print(word)
+
+
+def is_valid_input(word_format):
+    """ Check if the input is valid. """
+    for kind in word_format:
+        if kind not in ("c", "v"):
+            return False
+    return True
+
+
+main()
