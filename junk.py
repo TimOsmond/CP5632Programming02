@@ -74,62 +74,89 @@
 #
 # print_grid(3, 7)
 
-"""
-module-level docstring
-"""
-import random
-import string
+# """
+# module-level docstring
+# """
+# import random
+# import string
+#
+# """Make sure it has a docstring."""
+#
+#
+# def main():
+#     MENU = """(G)et name, (P)rint Greeting, (S)ecret name, (Q)uit"""
+#     choice = ""
+#     choice = menu_choice(MENU, choice)
+#     while choice != "Q":
+#         if choice == "G":
+#             name = get_valid_name()
+#             print(f"Hello {name}")
+#             choice = menu_choice(MENU, choice)
+#         elif choice == "P":
+#             print_greeting()
+#             choice = menu_choice(MENU, choice)
+#         else:
+#             print_secret_name()
+#             choice = menu_choice(MENU, choice)
+#     print("Bye!")
+#
+#
+# def print_secret_name():
+#     name = get_valid_name()
+#     for i in range(1, len(name) + 1):
+#         secret_name = random.choice(string.ascii_letters[0:26])
+#         print(secret_name, end="")
+#     print()
+#
+#
+# def print_greeting():
+#     name = get_valid_name()
+#     length = len(name)
+#     print("*" * length)
+#     print(name)
+#     print("*" * length)
+#
+#
+# def menu_choice(MENU, choice):
+#     print(MENU)
+#     choice = input("Choose: ").upper()
+#     return choice
+#
+#
+# def get_valid_name():
+#     """This is a DOCSTRING."""
+#     name = input("Name: ")
+#     if name == "":
+#         print("Invalid name")
+#         name = get_valid_name()
+#     return name
+#
+#
+# main()
+#
+# names = ["Bob", "Alice", "John", "Jane", "George", "Mary"]
+# number = int(input(f"Which name (max={len(names)}): "))
+# try:
+#     print(names[number - 1])
+# except IndexError:
+#     print("Invalid number")
+# except ValueError:
+#     print("Invalid number")
 
-"""Make sure it has a docstring."""
+# words = "one two three".split()
+# for i in range(len(words)):
+#     words[i] = words[i].title()
+# text = ", ".join(words)
+# print(text)
 
+# from operator import itemgetter
+#
+# score_pairs = [["Derek", 100], ["Bob", 90], ["Alice", 95]]
+# print(score_pairs)
+# score_pairs.sort(key=itemgetter(1, 0), reverse=True)
+# print(score_pairs)
 
-def main():
-    MENU = """(G)et name, (P)rint Greeting, (S)ecret name, (Q)uit"""
-    choice = ""
-    choice = menu_choice(MENU, choice)
-    while choice != "Q":
-        if choice == "G":
-            name = get_valid_name()
-            print(f"Hello {name}")
-            choice = menu_choice(MENU, choice)
-        elif choice == "P":
-            print_greeting()
-            choice = menu_choice(MENU, choice)
-        else:
-            print_secret_name()
-            choice = menu_choice(MENU, choice)
-    print("Bye!")
-
-
-def print_secret_name():
-    name = get_valid_name()
-    for i in range(1, len(name) + 1):
-        secret_name = random.choice(string.ascii_letters[0:26])
-        print(secret_name, end="")
-    print()
-
-
-def print_greeting():
-    name = get_valid_name()
-    length = len(name)
-    print("*" * length)
-    print(name)
-    print("*" * length)
-
-
-def menu_choice(MENU, choice):
-    print(MENU)
-    choice = input("Choose: ").upper()
-    return choice
-
-
-def get_valid_name():
-    """This is a DOCSTRING."""
-    name = input("Name: ")
-    if name == "":
-        print("Invalid name")
-        name = get_valid_name()
-    return name
-
-
-main()
+text = "This is a sentence"
+words = text.split()
+long_words = [word for word in words if len(word) > 3]
+print(long_words)

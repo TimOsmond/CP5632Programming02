@@ -5,7 +5,7 @@ Using list operations.
 # 1. Basic list operations
 numbers = []
 for i in range(5):
-    number = int(input("Number: "))
+    number = int(input("Five Numbers: "))
     numbers.append(number)
 print("The first number is", numbers[0])
 print("The last number is", numbers[-1])
@@ -48,7 +48,7 @@ print(full_initials)
 a_names = [name for name in names if name.startswith('A')]
 print(a_names)
 
-# use a list comprehension to create a list of all of the full_names
+# use a list comprehension to create a list of all the full_names
 # in lowercase format
 lowercase_full_names = [name.lower() for name in full_names]
 print(lowercase_full_names)
