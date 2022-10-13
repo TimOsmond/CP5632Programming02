@@ -6,8 +6,12 @@ Actual:   32 minutes
 
 
 def main():
-    winner_details = []
     filename = "wimbledon.csv"
+    read_results_file(filename)
+
+
+def read_results_file(filename):
+    winner_details = []
     with open(filename, "r", encoding="utf-8-sig") as in_file:
         in_file.readline()
         for line in in_file:
