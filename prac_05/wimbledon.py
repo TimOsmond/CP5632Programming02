@@ -4,8 +4,16 @@ Estimate: 60 minutes
 Actual:   32 minutes
 """
 
-def main():
 
+def main():
+    winner_details = []
+    filename = "wimbledon.csv"
+    with open(filename, "r", encoding="utf-8-sig") as in_file:
+        in_file.readline()
+        for line in in_file:
+            bits = line.strip().split(",")
+            winner_details.append(bits)
+        print(winner_details)
 
 
 main()
