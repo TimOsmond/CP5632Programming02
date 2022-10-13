@@ -10,12 +10,20 @@ FILENAME = "wimbledon.csv"
 def main():
     """Read Wimbledon csv results and print champions and countries."""
     winners_details = read_results_file(FILENAME)
-    print(winners_details)
+    # print(winners_details)
     winners_count = {}
-    winner_names = set()
+    winners_countries = set()
+    for countries in winners_details:
+        winners_countries.add(countries[1])
     for winner in winners_details:
-        winner_names.add(winner[2])
-    print(winner_names)
+        try:
+            winners_count[winner[2]] += 1
+        except KeyError:
+            winners_count[winner[2]] = 1
+
+    print(f"These {len(winners_countries)} countries have won Wimbledon")
+    print(", ".join(sorted(winners_countries)))
+    print(winners_count)
 
 
 def read_results_file(filename):
