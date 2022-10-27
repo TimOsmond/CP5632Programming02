@@ -156,7 +156,105 @@
 # score_pairs.sort(key=itemgetter(1, 0), reverse=True)
 # print(score_pairs)
 
-text = "This is a sentence"
-words = text.split()
-long_words = [word for word in words if len(word) > 3]
-print(long_words)
+# text = "This is a sentence"
+# words = text.split()
+# long_words = [word for word in words if len(word) > 3]
+# print(long_words)
+#
+# def main():
+#     """This is a docstring."""
+#     print("Hello")
+#     print("World")
+#     print("This is a docstring.")
+#
+#
+# s = "?name=Bob&age=99&day=Wed"
+#
+#
+# def extract_pairs():
+#     pairs = []
+#     parts = s[1:].split("&")
+#     print(parts)
+#     for part in parts:
+#         pair = part.split("=")
+#         try:
+#             pair[1] = int(pair[1])
+#             pairs.append(tuple((pair[0], int(pair[1]))))
+#         except ValueError:
+#             pairs.append(tuple(pair))
+#     print(pairs)
+#
+#
+# extract_pairs()
+# main()
+# """Remove from list"""
+# names = ["Ada", "Alan", "Bill", "John"]
+# print(", ".join(names))
+# name_to_remove = input("Who do you want to remove: ").title()
+# while name_to_remove != "":
+#     try:
+#         names.remove(name_to_remove)
+#     except ValueError:
+#         print("Name not found")
+#     print(", ".join(names))
+#     name_to_remove = input("Who do you want to remove: ").title()
+# print("Thanks for removing people.")
+# things = [True,1.2, "Good", [1, 10]]
+# print("%".join([things[2][1:-1]]))
+# print([str(t)[0] for t in things])
+
+# def main():
+#     numbers = input("Number")
+#     square_numbers(numbers)
+# ""
+#     def square_numbers(numbers)
+#         for square_numbers()
+#
+# main()
+
+# values = [1, 2, 3, 2]
+# values.remove(2)
+# print(values)
+
+# before = [1, 4, 0, -1]
+# after = before.sort()
+# print(after)
+
+# words = ["aye", "bee", "sea"]
+# print("/".join(words))
+
+# words = ["aye", "bee", "sea", "bee"]
+# words.remove("bee")
+# words.remove("bee")
+# print(words.pop())
+
+# things = list("one two three")
+# print(things)
+# print("{}-{}".format(*things))
+
+# print("*".join([len(word) for word in "one*two*three".split('*')]))
+# def main():
+#     """Concatenate name to age in lists"""
+#
+#     names = ["Ada", "Alan", "Bill", "John"]
+#     ages = [20, 30, 40, 40]
+#     oldest_person = find_oldest(ages)
+#     print(f"{names[oldest_person]} is {ages[oldest_person]} years old")
+#
+#
+# def find_oldest(ages):
+#     """Find the oldest age in list"""
+#     max_age_index = ages.index(max(ages))
+#     return max_age_index
+#
+#
+# main()
+
+name_to_age = {"Bill": 21, "Jane": 4, "Sven": 56}
+name = input("Name: ").title()
+age = int(input("Age: "))
+name_to_age[name] = name
+name_to_age[name] = age
+max_length = max(len(name) for name in list(name_to_age.keys()))
+for name, age in name_to_age.items():
+    print(f"{name:{max_length}} - \t{age:3}")
