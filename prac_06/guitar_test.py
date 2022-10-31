@@ -2,10 +2,11 @@
 Test guitars class
 """
 
-from prac_06.guitars import Guitar
+from prac_06.guitar import Guitar
 
 
 def main():
+    """Test guitars class."""
     name1 = "Gibson L-5 CES"
     year1 = 1922
     cost1 = 16035.40
