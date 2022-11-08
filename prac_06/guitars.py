@@ -1,7 +1,7 @@
 """
 Store a list of guitars and print details.
 """
-from prac_06.guitar import Guitar
+from prac_06.guitar import Guitar  # pylint: disable=import-error
 
 
 def main():
