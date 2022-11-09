@@ -1,8 +1,6 @@
 """Project management program."""
 
 
-
-
 class Project:
     """Get a Project object."""
 
@@ -16,7 +14,7 @@ class Project:
 
     def __repr__(self):
         """Return a string representation of Project object."""
-        return f"Project({self.name}, {self.start_date}, {self.priority}, {self.cost_estimate}, {self.completion_estimate})"
+        return f"{self.name}, {self.start_date}, {self.priority}, {self.cost_estimate}, {self.completion_estimate}"
 
     def __lt__(self, other):
         """Overload less than to compare year."""
@@ -28,7 +26,7 @@ class Project:
 
     def __str__(self):
         """Return a string representation of Project object."""
-        return f"{self.name} ({self.start_date}) : ${self.cost_estimate:.2f}"
+        return f"{self.name}, start: {self.start_date}, priority {self.priority}, estimate: ${self.cost_estimate:.2f}, completion: {self.completion_estimate}%"
 
     def get_age(self):
         """Get the age of the project."""
