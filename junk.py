@@ -250,11 +250,62 @@
 #
 # main()
 
-name_to_age = {"Bill": 21, "Jane": 4, "Sven": 56}
-name = input("Name: ").title()
-age = int(input("Age: "))
-name_to_age[name] = name
-name_to_age[name] = age
-max_length = max(len(name) for name in list(name_to_age.keys()))
-for name, age in name_to_age.items():
-    print(f"{name:{max_length}} - \t{age:3}")
+# name_to_age = {"Bill": 21, "Jane": 4, "Sven": 56}
+# name = input("Name: ").title()
+# age = int(input("Age: "))
+# name_to_age[name] = name
+# name_to_age[name] = age
+# max_length = max(len(name) for name in list(name_to_age.keys()))
+# for name, age in name_to_age.items():
+#     print(f"{name:{max_length}} - \t{age:3}")
+# class Thing:
+#     def __init__(self, a, b):
+#         self.a = a
+#         self.b = b
+#
+#     def change(self, b):
+#         self.a += b
+#
+# it = Thing(5, 6)
+# it.change(2)
+# print(it.a, it.b)
+
+# vehicle = Taxi('Prius')
+# print(vehicle.fuel)
+# vehicle.drive(50)
+
+# a = {1, 2, 3, 4}
+# b = {2, 4, 6, 8}
+# print(a ^ b)
+
+# try:
+#     from TestKivy.app import App
+# except ImportError:
+#     import pip._internal as pip
+#     pip.main(['install', 'kivy'])
+#     from TestKivy.app import App
+
+# (3 >= 3) or (5 < 7) and (9 != 5)
+
+# def load_movies(self, filename):
+#     """Load the movie lists from json file"""
+#     # self.movies = []
+#     with open(filename) as in_file:
+#         json_data = json.load(in_file)
+#         for movie_data in json_data:
+#             movie = Movie(movie_data["title"], movie_data["year"], movie_data["category"], movie_data["is_watched"])
+#             self.movies.append(movie)
+#
+#     def sort(self, key):
+#         """Sort movies by key"""
+#         self.movies.sort(key=itemgetter(key))
+
+# def save_to_file(self, filename):
+#     """Save the movie list to FILENAME"""
+#     with open(filename, 'w') as out_file:
+#         json.dump(self.movies, out_file)
+
+def save_to_file(self, filename):
+    """Save the movie list to FILENAME"""
+    with open(filename, 'w') as out_file:
+        json.dump(self.movies, out_file)

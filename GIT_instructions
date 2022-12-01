@@ -1,0 +1,24 @@
+Merge your PR on GitHub to ensure that your remote master branch is up-to-date. This updates your remote master branch to contain the work from your last feedback branch.
+In PyCharm, Checkout your local master branch.
+Pull to update your local master branch. This pulls in the changes from GitHub including the merge.
+(Double-check that you are on the master branch, not the feedback branch.)
+Create a new branch, prac_07_feedback.
+
+Create a branch called prac_0X_feedback by: Git > New Branch
+It may look like nothing happened, but your local repository should now have a new branch, which currently has the same contents as the 'master' (or 'main') branch, and it is now the one that is "checked out". See this in the PyCharm footer.
+Now that you've finished the coding work, it's time to request a code review...
+1. Commit your changes, making sure to add any new files that you created today.
+    You have already created and switched to the prac_05_feedback branch so your commits will go only to this branch (not master).
+2. Open your repository in a web browser, and you should see a notice about recent changes, with a button to create a pull request:
+3. Click the green button to make a pull request from prac_05_feedback to master.
+If that notice doesn't appear, you may need to switch to the prac_05_feedback branch first.
+Add a title like "Prac 5 code review request" and some detail about what you would like checked. In this description, you must mention the reviewer with their GitHub username and the @ symbol - e.g., @personname so they will be notified.
+
+If you are the first to do this, you're finished for now... move on to the next section and come back here when you receive a mention to do a review for someone else...
+When you have someone else's PR to review, carry on with the next steps:
+4.  Merge the pull request now (add a comment if you want). This merge replaces what was in the master branch with what is in the prac_05_feedback branch.
+GitHub will tell you that the prac_05_feedback branch can be deleted. You're welcome to delete it (both on GitHub and locally).
+5. Now the master branch has been updated on GitHub (remote), but not locally.
+In PyCharm, switch back to the local master branch by clicking in the footer where it shows the branch:
+6. Pull your changes from master (remote) to update your local repo: Git > Pull then click Pull.
+You should now be on your local master branch and see all your up-to-date work.
